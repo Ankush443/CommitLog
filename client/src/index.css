@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme (default) */
+    --bg-primary: 249 250 251;
+    --bg-secondary: 255 255 255;
+    --bg-tertiary: 243 244 246;
+    --text-primary: 17 24 39;
+    --text-secondary: 75 85 99;
+    --text-tertiary: 107 114 128;
+    --border-color: 229 231 235;
+    --primary: 59 130 246;
+    --primary-hover: 37 99 235;
+  }
+
+  .dark {
+    /* Dark theme */
+    --bg-primary: 17 24 39;
+    --bg-secondary: 31 41 55;
+    --bg-tertiary: 55 65 81;
+    --text-primary: 243 244 246;
+    --text-secondary: 209 213 219;
+    --text-tertiary: 156 163 175;
+    --border-color: 75 85 99;
+    --primary: 96 165 250;
+    --primary-hover: 59 130 246;
+  }
+
+  .matrix {
+    /* Matrix theme (green on black) */
+    --bg-primary: 0 0 0;
+    --bg-secondary: 10 20 10;
+    --bg-tertiary: 20 30 20;
+    --text-primary: 0 255 65;
+    --text-secondary: 0 200 50;
+    --text-tertiary: 0 150 40;
+    --border-color: 0 100 30;
+    --primary: 0 255 65;
+    --primary-hover: 0 200 50;
+  }
+
+  body {
+    @apply bg-[rgb(var(--bg-primary))] text-[rgb(var(--text-primary))];
+  }
+
+  /* Smooth transitions for theme changes */
+  * {
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Matrix theme animations */
+  .matrix .matrix-text {
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  }
+
+  .matrix .matrix-glow {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+  }
+}
+
