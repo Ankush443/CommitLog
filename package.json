@@ -1,0 +1,18 @@
+{
+  "name": "commitlog",
+  "version": "1.0.0",
+  "description": "A daily journal for your engineering work",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:server && npm run build:client",
+    "test": "cd server && npm test"
+  },
+  "keywords": ["journal", "development", "logs", "productivity"],
+  "author": "",
+  "license": "MIT"
+}
