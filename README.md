@@ -6,68 +6,34 @@ CommitLog is a lightweight MERN application that helps developers track their da
 
 ## Features
 
-### ✅ Implemented Features
-
-- **Dashboard** - Quick overview with weekly stats, recent logs, and quick actions
-- **Daily Logs** - Create, edit, and manage detailed development logs with:
-  - Date tracking (YYYY-MM-DD format, no timezone bugs)
-  - Title and completed work (required)
-  - Optional blockers and next steps
-  - Project association
-  - Repository URL links
-  - Tag management (up to 10 tags)
-- **Projects Management** - Organize logs by project with:
-  - Color-coded project badges
-  - Duplicate name prevention (case-insensitive)
-  - Safe deletion (preserves associated logs)
-- **Search & Filtering** - Find logs with:
-  - Full-text search across title, completed work, blockers, and next steps
-  - Filter by project
-  - Filter by date range
-  - Pagination (50 logs per page)
-- **Activity Calendar** - GitHub-style contribution graph showing:
-  - Full-year heatmap visualization
-  - Color-coded activity levels (0, 1, 2, 3-4, 5+ logs per day)
-  - Clickable dates to view logs
-  - Year navigation
-  - 90-day mini calendar on dashboard
-- **Weekly Recap** - Automated weekly summary featuring:
-  - Total logs and active days
-  - Projects worked on with counts
-  - Completed work aggregated by date
-  - Blockers and next steps (when present)
-  - Week navigation (Monday-Sunday)
-- **Theme System** - Multiple visual themes:
-  - Light mode (default)
-  - Dark mode
-  - Matrix mode (green-on-black hacker aesthetic)
-  - Theme preference persisted in localStorage
+- **Daily Logs** — Create, edit, and delete logs with date, title, completed work, blockers, next steps, project tag, repository URL, and up to 10 tags
+- **Projects** — Organize logs by color-coded projects; deleting a project preserves its logs
+- **Search & Filter** — Full-text search, project filter, date-range filter, and pagination
+- **Activity Calendar** — GitHub-style year heatmap plus a 90-day mini calendar on the dashboard
+- **Weekly Recap** — Automatic Monday–Sunday summary with stats, projects, completed work, and blockers
+- **Theme Switcher** — Light, Dark, and Matrix themes from the sidebar
 
 ## Screenshots
 
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
-*Overview with weekly stats, recent logs, and 90-day activity heatmap*
+| Dashboard | Logs |
+|:-:|:-:|
+| <img src="screenshots/dashboard.png" width="340" alt="Dashboard"> | <img src="screenshots/logs-list.png" width="340" alt="Logs"> |
 
-### Logs Management
-![Logs List](screenshots/logs-list.png)
-*Search, filter, and browse all development logs with pagination*
+| Log Form | Projects |
+|:-:|:-:|
+| <img src="screenshots/log-form.png" width="340" alt="Log Form"> | <img src="screenshots/projects.png" width="340" alt="Projects"> |
 
-### Log Creation
-![Log Form](screenshots/log-form.png)
-*Create detailed logs with project association, tags, and repository links*
+| Calendar | Weekly Recap |
+|:-:|:-:|
+| <img src="screenshots/calendar.png" width="340" alt="Calendar"> | <img src="screenshots/weekly-recap.png" width="340" alt="Weekly Recap"> |
 
-### Projects
-![Projects](screenshots/projects.png)
-*Manage color-coded projects to organize your work*
+## Themes
 
-### Activity Calendar
-![Calendar](screenshots/calendar.png)
-*GitHub-style year view with contribution heatmap*
+CommitLog ships with a theme switcher in the sidebar — pick a look and it stays saved in your browser.
 
-### Weekly Recap
-![Weekly Recap](screenshots/weekly-recap.png)
-*Automated summary of your week's accomplishments*
+| Light | Dark | Matrix |
+|:-:|:-:|:-:|
+| Clean, high-contrast light UI | Low-glare dark UI | Green-on-black hacker aesthetic |
 
 ## Tech Stack
 
@@ -407,7 +373,6 @@ Potential enhancements beyond the MVP:
 - [ ] Export logs to Markdown or PDF
 - [ ] GitHub API integration for commit history
 - [ ] Customizable weekly recap templates
-- [ ] Dark mode support
 - [ ] Keyboard shortcuts
 - [ ] Log templates for common tasks
 - [ ] Bulk operations (delete, tag)
